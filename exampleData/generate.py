@@ -3,17 +3,15 @@ import numpy as np
 import random
 import sqlite3
 
-#3일 동안의 분당데이터 생성
-#3 * 24 * 60 => 3일
 total_minutes = 3 * 24 * 60
 
 data = {
-    "time": pd.date_range(start="2024-01-01", periods=total_minutes, freq='T'),
-    "temperature": np.random.uniform(15, 25, total_minutes),
-    "humidity": np.random.uniform(40, 60, total_minutes),
-    "water_flow": np.random.uniform(0, 30, total_minutes),
-    "air_quality_index": np.random.randint(0, 501, total_minutes),
-    "flex_pressure": np.random.uniform(0, 100, total_minutes)
+    "time": pd.date_range(start="2023-01-01", periods=total_minutes, freq='T'),
+    "temperature": np.random.normal(15, 25, total_minutes),
+    "humidity": np.random.normal(40, 60, total_minutes),
+    "water_flow": np.random.normal(0, 30, total_minutes),
+    "air_quality_index": np.random.normal(0, 501, total_minutes),
+    "flex_pressure": np.random.normal(0, 100, total_minutes)
 }
 
 df = pd.DataFrame(data)
