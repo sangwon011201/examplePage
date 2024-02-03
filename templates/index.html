@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .data-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        .data-box {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="data-container">
+        <div class="data-box" id="temperature-box">온도: - C</div>
+        <div class="data-box" id="humidity-box">습도: - %</div>
+        <div class="data-box" id="water-flow-box">액화수소 유량: - L/min</div>
+        <div class="data-box" id="air-quality-box">공기질: -</div>
+        <div class="data-box" id="flex-pressure-box">가스관 압력: -</div>
+    </div>
+    <canvas id="sensorChart"></canvas>
+    <script src="{{url_for('static', filename='chartUpdate.js')}}"></script>
+</body>
+
+</html>
