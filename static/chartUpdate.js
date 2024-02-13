@@ -74,4 +74,4 @@ async function fetchData() {
     document.getElementById('flex-pressure-box').textContent = `Flex Pressure: ${data[0].flex_pressure}`;
 }
 
-setInterval(fetchData, 10000); // 10초 간격 업뎃
+setInterval(fetchData, 1000); // 10초 간격 업뎃

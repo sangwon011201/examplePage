@@ -5,7 +5,6 @@ from flask_migrate import Migrate
 import os
 from sqlalchemy.sql import text
 
-
 app = Flask(__name__)
 
 base_dir = os.path.abspath(os.path.dirname(__file__))

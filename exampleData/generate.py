@@ -38,5 +38,3 @@ cursor.execute(query)
 df.to_sql('sensor_data', conn, if_exists='replace', index=True, index_label='id', method='multi')
 
 conn.close()
-
-print('끝남')
